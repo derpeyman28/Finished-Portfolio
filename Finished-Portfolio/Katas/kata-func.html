@@ -1,0 +1,74 @@
+<html>
+
+<body>
+    <div>
+        <p>
+            <a href="../index.html">Click here to go back to the home page</a>
+        </p>
+    </div>
+    <h1>All kata results are in the console</h1>
+</body>
+<script>
+    //Kata 1 (Add)
+    console.log("1. Write a function named \"add\" that takes two arguments and returns their sum (use 2 and 4 to get 6).")
+    function add(number1, number2) {
+        return number1 + number2
+
+    }
+    console.log(add(2, 4))
+
+    //Kata 2 (Multiply)
+    console.log("2. Write a function named \"multiply\" that takes two arguments and returns their product (6 and 8). You must use the add function.")
+    function multiply(number1, number2) {
+        var total = 0
+        for (var i = 1; i <= number2; i++) {
+            total = add(total, number1)
+        }
+        return total
+    }
+    console.log(multiply(8, 6))
+
+    //Kata 3 (Power)
+    console.log("3. Write a function named \"power\" that takes two arguments (x and n) and returns the the result of raising x to the nth power using previously defined functions.")
+    function power(x, n) {
+        var final = 1
+        for (var i = 1; i <= n; i++) {
+            final = multiply(final, x)
+        }
+        return final
+    }
+    console.log(power(2, 8))
+
+    //Kata 4 (Factorial)
+    console.log("4. Write a function named \"factorial\" that takes a single argument and returns the factorial of that argument.")
+    function factorial(fa) {
+        var factResult = fa
+        for (var i = 0; i < fa; i++) {
+            var fa = add(fa, -1)
+            factResult = multiply(factResult, fa)
+        }
+        return factResult
+    }
+    console.log(factorial(4))
+
+    //Kata 5 (Fibonacci)
+    console.log("5. Write a function named \"fibonacci\" that takes an argument n and returns the nth")
+    function fibonacci(fb) {
+        var fibResult = 0
+        if (fb <= 1) {
+            fibResult = fb
+        }
+        else {
+            var fx = fb
+            var fy = fb - 1
+            var fz = fb - 2
+            var fr1 = fibonacci(fy)
+            var fr2 = fibonacci(fz)
+            fibResult = add(fr1, fr2)
+        }
+        return fibResult
+    }
+    console.log(fibonacci(8))
+</script>
+
+</html>

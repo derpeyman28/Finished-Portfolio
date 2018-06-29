@@ -1,0 +1,64 @@
+<html>
+<head>
+    <style>
+        #box {
+            width: 250px; 
+            height: 250px; 
+            position: absolute; 
+            background-image:url("cropped-me.jpg"); 
+            left: 200px; 
+            top: 200px;
+        }
+        body {
+            background:rgb(30, 255, 0);
+        }
+        #r {
+            color:red
+        }
+        .movekeys {
+            color:blue
+        }
+    </style>
+</head>
+<body>
+    <h1 class="tut">Keyboard Event Test</h1>
+    <h2 class="tut">Use the <span class="movekeys">arrow keys</span> or <span class="movekeys">WASD</span> to move the image around! Press <span id="r">"R"</span> to reset the image!</h2>
+    <h3 class="tut">Press space to hide all this text.</h3>
+    <div id="box"></div>
+</body>
+<script>
+    'use strict';
+    let boxTop = 200;
+    let boxLeft = 200;
+    document.addEventListener('keydown', (event) => {
+        const keyName = event.key;
+        if(keyName === "ArrowDown" || keyName === "s" || keyName === "S") {
+            boxTop = boxTop + 10
+        }
+        if(keyName === "ArrowUp" || keyName === "w" || keyName === "W") {
+            boxTop = boxTop - 10
+        }
+        if(keyName === "ArrowLeft" || keyName === "a" || keyName === "A") {
+            boxLeft = boxLeft - 10
+        }
+        if(keyName === "ArrowRight" || keyName === "d" || keyName === "D") {
+            boxLeft = boxLeft + 10
+        }
+        if(keyName === "r" || keyName === "R") {
+            boxTop = 200
+            boxLeft = 200
+        }
+        if(keyName === " " || keyName === "") {
+            console.log(document.getElementsByClassName("tut"))
+            var tut = document.getElementsByClassName("tut")
+            for(let i = 0; i < tut.length; i++) {
+                tut[i].textContent = ""
+            }
+            
+        }
+        document.getElementById("box").style.top = boxTop + "px";
+        document.getElementById("box").style.left = boxLeft + "px";
+        console.log('keydown event\n\n' + 'key: ' + keyName);
+    });
+</script>
+</html>

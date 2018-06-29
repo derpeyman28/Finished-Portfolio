@@ -1,0 +1,124 @@
+<html>
+
+<head>
+    <title>Passive Agressive 8-ball</title>
+    <style>
+        .centered {
+            top: 150px;
+            left: 500px;
+            display: block;
+            position: relative;
+        }
+
+        #image {
+            width: 200px;
+            left: 560px;
+        }
+
+        #textbox {
+            left: 560px;
+            width: 200px;
+            height: 100px;
+        }
+
+        #button {
+            left: 630px;
+            width: 50px;
+            top: 180px;
+        }
+
+        #response {
+            top: 200px;
+            left: 510px;
+            width: 325;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p>
+            <a href="../index.html">Click here to go back to the home page</a>
+        </p>
+    </div>
+    <image id="image" class="centered" src="ball.png"></image>
+    <h1 class="centered">Passive Agressive 8-ball!</h1>
+    <textarea class="centered" id="textbox">Ask your question.</textarea>
+    <button class="centered" id="button">Ask</button>
+    <div class="centered" id="response"></div>
+</body>
+<script>
+    const button = document.getElementById("button")
+    const response = document.getElementById("response")
+    button.onclick = function () {
+        let selNum = Math.floor(Math.random() * (21 - 1) + 1);
+        console.log(selNum)
+        switch (selNum) {
+            case 1:
+                response.textContent = "Obviously"
+                break;
+            case 2:
+                response.textContent = "The seashells are telling me yes"
+                break;
+            case 3:
+                response.textContent = "Ask your dad"
+                break;
+            case 4:
+                response.textContent = "Wait 'till you're older"
+                break;
+            case 5:
+                response.textContent = "Do I look like a therapist to you?"
+                break;
+            case 6:
+                response.textContent = "Only when the planets align"
+                break;
+            case 7:
+                response.textContent = "Don't bet on it"
+                break;
+            case 8:
+                response.textContent = "What?"
+                break;
+            case 9:
+                response.textContent = "Sir, yes, sir!"
+                break;
+            case 10:
+                response.textContent = "Even a sloth would be quick to tell you no."
+                break;
+            case 11:
+                response.textContent = "What kind of a question is that?"
+                break;
+            case 12:
+                response.textContent = "Yeah, right"
+                break;
+            case 13:
+                response.textContent = "Sure, whatever"
+                break;
+            case 14:
+                response.textContent = "What do you think?"
+                break;
+            case 15:
+                response.textContent = "A rabbit once told me: \"If you can't say something nice, don't say anything at all\""
+                break;
+            case 16:
+                response.textContent = "Are you THAT desperate for an answer?"
+                break;
+            case 17:
+                response.textContent = "Is that a question you want me to answer?"
+                break;
+            case 18:
+                response.textContent = "You just have to find the answer inside yourself."
+                break;
+            case 19:
+                response.textContent = "Please leave a message after the tone."
+                break;
+            case 20:
+                response.textContent = "Try googling the answer."
+                break;
+            case 21:
+                response.textContent = ""
+                break;
+        }
+    }
+</script>
+
+</html>

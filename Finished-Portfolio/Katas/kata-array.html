@@ -1,0 +1,67 @@
+<html>
+
+<body>
+    <div>
+        <p>
+            <a href="../index.html">Click here to go back to the home page</a>
+        </p>
+    </div>
+    <h1>All kata results are in the Javascript console</h1>
+</body>
+<script>
+    //Variables
+    const gotCitiesCSV = "King's Landing,Braavos,Volantis,Old Valyria,Free Cities,Qarth,Meereen";
+    const lotrCitiesArray = ["Mordor", "Gondor", "Rohan", "Beleriand", "Mirkwood", "Dead Marshes", "Rhun", "Harad"];
+    const bestThing = "The best thing about a boolean is even if you are wrong you are only off by a bit";
+    //Kata 1
+    console.log("1. Display an array from the cities in gotCitiesCSV")
+    var kata1 = gotCitiesCSV.split(",")
+    console.log(kata1)
+
+    //Kata 2
+    console.log("2. Display an array of words from the sentence in bestThing")
+    var kata2 = bestThing.split(" ")
+    console.log(kata2)
+
+    //Kata 3
+    console.log("3. Display a string separated by semi-colons instead of commas from gotCitiesCSV")
+    var kata3 = kata1.join(";")
+    console.log(kata3)
+
+    //Kata 4
+    console.log("4. Display a CSV (comma-separated) string from the lotrCitiesArray")
+    var kata4 = lotrCitiesArray.join(", ")
+    console.log(kata4)
+
+    //Kata 5 <!>
+    console.log("5. Display the last 5 cities in lotrCitiesArray")
+    var kata5 = lotrCitiesArray.slice(lotrCitiesArray.length - 5)
+    console.log(kata5)
+
+    //Kata 6 <!>
+    console.log("6. Using splice, remove \"Rohan\" from lotrCitiesArray")
+    lotrCitiesArray.splice(2, 1)
+    console.log(lotrCitiesArray)
+
+    //Kata 7
+    console.log("7. Using slice, display characters between the 23rd and 38th position of bestThing (i.e., \"boolean is even\")")
+    var kata7 = bestThing.slice(23, 38)
+    console.log(kata7)
+
+    //Kata 8
+    console.log("8. Find and display the index of \"only\" in bestThing")
+    var kata8 = bestThing.slice(64, 68)
+    console.log(kata8)
+
+    //Kata 9
+    console.log("9. Find and display all cities from gotCitiesCSV  that use double vowels (\"aa\",\"ee\", etc.)")
+    var kata9 = [gotCitiesCSV.slice(15, 23), gotCitiesCSV.slice(44, 56), gotCitiesCSV.slice(62, 70),]
+    console.log(kata9)
+
+    //Kata 10
+    console.log("10. Sort lotrCitiesArray in alphabetical order.")
+    console.log("Note: A teacher allowed me to sort it alphabetically so i dont have to sort it by number of characters.")
+    console.log(lotrCitiesArray.sort())
+</script>
+
+</html>

@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <title>Connect 4!</title>
+        <meta charset="utf-8">
+        <style>
+            .clear {
+                clear: both;
+            }
+            .gridcell {
+                width:50px; 
+                height: 50px;
+                border: 1px solid black;
+                float: left;
+            }
+            button {
+                width: 48px;
+                height: 28px;
+                margin:0.3px;
+            }
+            #buttondiv {
+                height:30px;
+            }
+            .red {
+                background-color: red;
+            }
+            .blue {
+                background-color: blue;
+            }
+            .redtext {
+                color: red;
+            }
+            .blutext {
+                color: blue;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <h1>Connect 4!</h1>
+        <div id="gamespace">
+
+        </div>
+        <div id="buttondiv">
+            <button id="button0">drop</button>
+            <button id="button1">drop</button>
+            <button id="button2">drop</button>
+            <button id="button3">drop</button>
+            <button id="button4">drop</button>
+            <button id="button5">drop</button>
+            <button id="button6">drop</button>
+            
+        </div>
+        <h2 id="gamestat">It is player <span id="span" class="redtext">red</span>'s turn</h2>
+        <button id="skip">skip</button>
+    </body>
+    <script src="main.js"></script>
+</html>
